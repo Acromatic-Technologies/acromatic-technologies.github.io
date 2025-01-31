@@ -3,14 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://acromatic-technologies.github.io/assets/favicon.ico">
     <title>Acromatic</title>
-    <LINK REL= stylesheet TYPE="text/css" HREF= https://acromatic-technologies.github.io/styles.css>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif; /* Premium font */
+        }
+
+        /* Fullscreen background image */
+        .hero {
+            width: 100%;
+            height: 100vh; /* 1920x1080 ratio */
+            background-color: #020870;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Mobile background image */
+        @media (max-width: 768px) {
+            .hero {
+                background-image: url('mobile-example.png'); /* Mobile image */
+            }
+        }
+        
+        /* Transparent navbar fixed on image */
+        .navbar {
+            position: absolute; /* Navbar ko background ke upar fix kar diya */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent; /* Semi-transparent black */
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000; /* Ensure navbar is above the image */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px 15px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
+
     <nav class="navbar">
         <div class="container">
-            <img src="https://acromatic-technologies.github.io/assets/acromatic%20technologies%20logo%20-%20copy.png" width="50" height="50">
+            <div class="logo">
+                <img src="https://acromatic-technologies.github.io/assets/acromatic%20technologies%20logo%20-%20copy.png" alt="Acromatic Logo">
+            </div>
             <ul class="nav-links">
                 <li><a href="https://acromatic-technologies.github.io">Home</a></li>
                 <li><a href="https://acromatic-technologies.github.io/about">About</a></li>
@@ -19,5 +97,10 @@
             </ul>
         </div>
     </nav>
+    
+    <section class="hero">
+     
+    </section>
+
 </body>
 </html>
