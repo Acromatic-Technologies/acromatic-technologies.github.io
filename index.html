@@ -12,7 +12,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif; /* Premium font */
-            background-color: #020870;
+            
         }
         
         .body {
@@ -79,6 +79,21 @@
             background: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
         }
+        
+        .hero img {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 100vh; /* Prevent overflow */
+            object-fit: cover; /* Crop image to fit */
+        }
+        
+        /* Mobile image */
+        @media (max-width: 768px) {
+            .hero img {
+                content: url('#'); /* Mobile image */
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -98,7 +113,7 @@
     </nav>
     
     <section class="hero">
-     
+     <img src="#">
     </section>
 
 </body>
