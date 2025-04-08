@@ -204,12 +204,40 @@
         width: 100%;
             }
         }
+  .reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
     </style>
     <script>
         function toggleMenu() {
             var menu = document.getElementById('mobileMenu');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
+        document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // run once
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    const revealEl = document.querySelector('.reveal');
+    if (revealEl) {
+      observer.observe(revealEl);
+    }
+  });
     </script>
 </head>
 <body>
@@ -237,10 +265,12 @@
     </header>
     
     <section id="home">
+      <div class="reveal">
         <h1 style="font-size: 45px">Acromatic Technologies</h1>
         <h1 style="font-size: 35px"><strong>Your Digital Growth Partner</strong></h1>
         <p>We engineer high-performance websites and hosting solutions designed for businesses</p>
         <a href="#contact" class="cta">Request a Consultation</a>
+      </div>
     </section>
     
 <section id="services">
