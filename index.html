@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acromatic | Emerging Technologies for a Better Tomorrow</title>
+  <meta name="description" content="Acromatic Technologies is an emerging full-spectrum tech company based in Delhi, focused on building innovative solutions across hardware, software, AI, and sustainable IT infrastructure. From intelligent server systems to next-gen platforms, Acromatic is shaping the future of technology.">
+  <meta name="keywords" content="acromatic, acromatic technologies, server optimization, sustainable IT, tech innovation, AI platforms, digital infrastructure, cloud systems, energy efficient computing, hardware-software integration, Delhi tech startup, Arnav Mishra">
+  <meta property="og:title" content="Acromatic Technologies Building the Future of Sustainable and Intelligent Tech">
+  <meta property="og:description" content="From intelligent server optimization to next-gen tech platforms, Acromatic Technologies is reimagining the future of IT, founded by teen innovator Arnav Mishra in Delhi.">
+  <meta property="og:image" content="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png">
+    <meta property="og:url" content="https://acromatic-technologies.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Acromatic | Emerging Technologies for a Better Tomorrow">
+    <meta name="twitter:description" content="Acromatic Technologies is an emerging full-spectrum tech company based in Delhi, focused on building innovative solutions across hardware, software, AI, and sustainable IT infrastructure. From intelligent server systems to next-gen platforms, Acromatic is shaping the future of technology.">
+    <meta name="twitter:image" content="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png">
+    <meta name="twitter:site" content="@Acromatic_Tech">
+    <link rel="canonical" href="https://acromatic-technologies.github.io/">
+    <link rel="icon" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/apple-toch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon-16x16.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #e6e6e6;
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    :root {
+      --primary: #00ffe7;
+      --brand-blue: #0b0694;
+      --bg-dark: #0d0d0d;
+      --bg-light: #f7f7f7;
+      --text-light: #e6e6e6;
+      --text-dark: #111;
+    }
+
+    body.light-mode {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    body.light-mode header,
+    body.light-mode footer {
+      background-color: #fff;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    p { margin: 1rem 0; line-height: 1.6; }
+
+    .cta-btn {
+      background: var(--primary);
+      border: 2px solid var(--brand-blue);
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+      color: #000;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+      background: var(--brand-blue);
+      color: #fff;
+    }
+
+    /* Header / Nav */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.85);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    /* Responsive Nav */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #111;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    .toggle {
+      cursor: pointer;
+      padding: 0.4rem 1rem;
+      background: var(--primary);
+      color: #000;
+      border-radius: 20px;
+      border: none;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      background: linear-gradient(145deg, #000 40%, #031424 100%);
+    }
+
+    .hero h1 {
+      font-size: 2.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h2 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .tech-item {
+      background: #111;
+      border: 1px solid #222;
+      border-left: 4px solid var(--brand-blue);
+      padding: 1rem;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .tech-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    footer a {
+      margin: 0 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media(min-width: 768px) {
+      .hero h1 { font-size: 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png" alt="Acromatic Logo" />
+    Acromatic
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+
+  <nav id="main-nav">
+    <a href="#technologies">What We Do</a>
+    <a href="#project">Featured Project</a>
+    <a href="#innovation">Innovation First</a>
+    <a href="#join">Join Us</a>
+    <button class="toggle" onclick="toggleMode()">☀️/🌙</button>
+  </nav>
+</header>
+
+<section class="hero fade">
+  <h1>Inventing the Future of Tech</h1>
+  <h2>From smarter systems to sustainable infrastructure</h2>
+  <p>Acromatic is building powerful technologies across hardware, software, and AI to solve big problems — from energy efficiency to intelligent cloud systems.</p>
+  <br/>
+  <button class="cta-btn" onclick="document.getElementById('join').scrollIntoView()">Partner With Us</button>
+</section>
+
+<section id="technologies" class="fade">
+  <h2>What We Do</h2>
+  <p>We develop impactful technology across multiple fields to shape tomorrow:</p>
+  <div class="tech-grid">
+    <div class="tech-item"><strong>Smart Systems</strong><br/> Embedded tech for real-time optimization</div>
+    <div class="tech-item"><strong>Next-Gen Devices</strong><br/> Custom-built electronics for enterprise impact</div>
+    <div class="tech-item"><strong>AI Platforms</strong><br/> Intelligence that evolves with data</div>
+    <div class="tech-item"><strong>Cloud Infrastructure</strong><br/> Reliable, scalable, and sustainable</div>
+    <div class="tech-item"><strong>Green Technologies</strong><br/> Engineering for climate-conscious solutions</div>
+    <div class="tech-item"><strong>Digital Ecosystems</strong><br/> Interconnected systems for global use</div>
+  </div>
+</section>
+
+<section id="project" class="fade">
+  <h2>Flagship Project: Acromatic Energy Optimization Engine</h2>
+  <p>Our first innovation tackles one of the biggest challenges in IT — energy waste in server infrastructure.</p>
+  <ul>
+    <li>🔋 Real-time energy consumption monitoring</li>
+    <li>❄️ AI-optimized cooling logic</li>
+    <li>🧠 System-level software-hardware orchestration</li>
+    <li>🌍 Designed for eco-conscious data centers</li>
+  </ul>
+  <br/>
+  <button class="cta-btn">Explore the Engine</button>
+</section>
+
+<section id="innovation" class="fade">
+  <h2>Innovation First</h2>
+  <p>Founded by 14-year-old technologist Arnav Mishra, Acromatic was born from curiosity, and scaled with vision — to create tech that impacts industries and the environment alike.</p>
+  <p>We’re building a research-first, problem-solving culture where innovation fuels sustainable progress across digital infrastructure.</p>
+  <blockquote style="font-style: italic; margin-top: 1rem;">"Age doesn't limit innovation. Passion, curiosity, and purpose do the real work." — Arnav Mishra</blockquote>
+</section>
+
+<section id="join" class="fade">
+  <h2>Join the Journey</h2>
+  <p>Whether you're an engineer, partner, investor, or supporter — there's a place for you in Acromatic’s mission.</p>
+  <br/>
+  <button class="cta-btn">Get Early Access</button>
+  <button class="cta-btn" style="margin-left: 1rem;">Contact Us</button>
+</section>
+
+<footer>
+  <p>Connect with us:</p>
+  <a href="https://github.com/acromatic-technologies" target="_blank">GitHub</a> |
+  <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+  <p>&copy; 2025 Acromatic Technologies Pvt Ltd</p>
+</footer>
+
+<script>
+  function toggleMode() {
+    document.body.classList.toggle('light-mode');
+  }
+
+  function toggleMenu() {
+    const nav = document.getElementById('main-nav');
+    nav.classList.toggle('open');
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
