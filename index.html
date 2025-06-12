@@ -9,29 +9,19 @@
   <meta property="og:title" content="Acromatic Technologies Building the Future of Sustainable and Intelligent Tech">
   <meta property="og:description" content="From intelligent server optimization to next-gen tech platforms, Acromatic Technologies is reimagining the future of IT, founded by teen innovator Arnav Mishra in Delhi.">
   <meta property="og:image" content="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png">
-    <meta property="og:url" content="https://acromatic-technologies.github.io/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Acromatic | Emerging Technologies for a Better Tomorrow">
-    <meta name="twitter:description" content="Acromatic Technologies is an emerging full-spectrum tech company based in Delhi, focused on building innovative solutions across hardware, software, AI, and sustainable IT infrastructure. From intelligent server systems to next-gen platforms, Acromatic is shaping the future of technology.">
-    <meta name="twitter:image" content="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png">
-    <meta name="twitter:site" content="@Acromatic_Tech">
-    <link rel="canonical" href="https://acromatic-technologies.github.io/">
-    <link rel="icon" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/apple-toch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon-16x16.png">
+  <meta property="og:url" content="https://acromatic-technologies.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Acromatic | Emerging Technologies for a Better Tomorrow">
+  <meta name="twitter:description" content="Acromatic Technologies is an emerging full-spectrum tech company based in Delhi, focused on building innovative solutions across hardware, software, AI, and sustainable IT infrastructure.">
+  <meta name="twitter:image" content="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png">
+  <meta name="twitter:site" content="@Acromatic_Tech">
+  <link rel="canonical" href="https://acromatic-technologies.github.io/">
+  <link rel="icon" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/apple-toch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon-16x16.png">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d0d0d;
-      color: #e6e6e6;
-      scroll-behavior: smooth;
-      transition: background 0.3s, color 0.3s;
-    }
-
     :root {
       --primary: #00ffe7;
       --brand-blue: #0b0694;
@@ -39,32 +29,22 @@
       --bg-light: #f7f7f7;
       --text-light: #e6e6e6;
       --text-dark: #111;
-      --card-light: #ffffff;
       --card-dark: #111;
+      --card-light: #fff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
     }
 
     body.light-mode {
       background-color: var(--bg-light);
       color: var(--text-dark);
-    }
-
-    body.light-mode header,
-    body.light-mode footer {
-      background-color: #ffffff;
-    }
-
-    body.light-mode .hero {
-      background: linear-gradient(145deg, #e7e7e7 40%, #ffffff 100%);
-    }
-
-    body.light-mode .tech-item {
-      background-color: var(--card-light);
-      border-left: 4px solid var(--brand-blue);
-      border: 1px solid #ccc;
-    }
-
-    body.light-mode nav {
-      background: #fff;
     }
 
     section {
@@ -106,10 +86,14 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background: rgba(0,0,0,0.85);
+      background: rgba(0, 0, 0, 0.85);
       position: sticky;
       top: 0;
       z-index: 999;
+    }
+
+    body.light-mode header {
+      background: #fff;
     }
 
     .logo {
@@ -128,6 +112,7 @@
     nav {
       display: flex;
       gap: 1.2rem;
+      background: transparent;
     }
 
     nav a {
@@ -154,32 +139,6 @@
       background: var(--primary);
     }
 
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: #111;
-        padding: 1rem;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      }
-
-      body.light-mode nav {
-        background: #fff;
-      }
-
-      nav.open {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-    }
-
     .toggle {
       cursor: pointer;
       padding: 0.4rem 1rem;
@@ -191,10 +150,40 @@
       margin-left: 1rem;
     }
 
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: var(--card-dark);
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      }
+
+      body.light-mode nav {
+        background: var(--card-light);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
     .hero {
       text-align: center;
       padding: 6rem 2rem 4rem;
       background: linear-gradient(145deg, #000 40%, #031424 100%);
+    }
+
+    body.light-mode .hero {
+      background: linear-gradient(145deg, #e6f9f9, #ffffff);
     }
 
     .hero h1 {
@@ -236,10 +225,19 @@
       border-color: var(--primary);
     }
 
+    body.light-mode .tech-item {
+      background: #fff;
+      border: 1px solid #ccc;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
       background: rgba(0, 0, 0, 0.85);
+    }
+
+    body.light-mode footer {
+      background: #f0f0f0;
     }
 
     footer a {
@@ -290,7 +288,7 @@
   <h2>From smarter systems to sustainable infrastructure</h2>
   <p>Acromatic is building powerful technologies across hardware, software, and AI to solve big problems — from energy efficiency to intelligent cloud systems.</p>
   <br/>
-  <button class="cta-btn" onclick="document.getElementById('join').scrollIntoView()">Partner With Us</button>
+  <a class="cta-btn" href="#join">Partner With Us</a>
 </section>
 
 <section id="technologies" class="fade">
@@ -316,7 +314,7 @@
     <li>🌍 Designed for eco-conscious data centers</li>
   </ul>
   <br/>
-  <button class="cta-btn">Explore the Engine</button>
+  <a class="cta-btn" href="#">Explore the Engine</a>
 </section>
 
 <section id="innovation" class="fade">
@@ -330,8 +328,8 @@
   <h2>Join the Journey</h2>
   <p>Whether you're an engineer, partner, investor, or supporter — there's a place for you in Acromatic’s mission.</p>
   <br/>
-  <button class="cta-btn"><a href="/services">Get Early Access</a></button>
-  <button class="cta-btn" style="margin-left: 1rem;"><a href="/contact">Contact Us</a></button>
+  <a class="cta-btn" href="/services">Get Early Access</a>
+  <a class="cta-btn" style="margin-left: 1rem;" href="/contact">Contact Us</a>
 </section>
 
 <footer>
@@ -347,8 +345,7 @@
   }
 
   function toggleMenu() {
-    const nav = document.getElementById('main-nav');
-    nav.classList.toggle('open');
+    document.getElementById('main-nav').classList.toggle('open');
   }
 
   const observer = new IntersectionObserver(entries => {
