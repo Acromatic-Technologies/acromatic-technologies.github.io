@@ -39,6 +39,8 @@
       --bg-light: #f7f7f7;
       --text-light: #e6e6e6;
       --text-dark: #111;
+      --card-light: #ffffff;
+      --card-dark: #111;
     }
 
     body.light-mode {
@@ -48,7 +50,21 @@
 
     body.light-mode header,
     body.light-mode footer {
-      background-color: #fff;
+      background-color: #ffffff;
+    }
+
+    body.light-mode .hero {
+      background: linear-gradient(145deg, #e7e7e7 40%, #ffffff 100%);
+    }
+
+    body.light-mode .tech-item {
+      background-color: var(--card-light);
+      border-left: 4px solid var(--brand-blue);
+      border: 1px solid #ccc;
+    }
+
+    body.light-mode nav {
+      background: #fff;
     }
 
     section {
@@ -76,6 +92,7 @@
       cursor: pointer;
       transition: transform 0.3s ease, background 0.3s ease;
       color: #000;
+      text-decoration: none;
     }
 
     .cta-btn:hover {
@@ -84,7 +101,6 @@
       color: #fff;
     }
 
-    /* Header / Nav */
     header {
       display: flex;
       justify-content: space-between;
@@ -138,7 +154,6 @@
       background: var(--primary);
     }
 
-    /* Responsive Nav */
     @media (max-width: 768px) {
       nav {
         display: none;
@@ -150,6 +165,10 @@
         padding: 1rem;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      }
+
+      body.light-mode nav {
+        background: #fff;
       }
 
       nav.open {
@@ -204,7 +223,7 @@
     }
 
     .tech-item {
-      background: #111;
+      background: var(--card-dark);
       border: 1px solid #222;
       border-left: 4px solid var(--brand-blue);
       padding: 1rem;
