@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contribute to Acromatic</title>
+  <link rel="icon" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon.ico" />
+  <style>
+    :root {
+      --primary: #00ffe7;
+      --brand-blue: #0b0694;
+      --bg-dark: #0d0d0d;
+      --bg-light: #f7f7f7;
+      --text-light: #e6e6e6;
+      --text-dark: #111;
+      --card-dark: #111;
+      --card-light: #fff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.85);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    body.light-mode header {
+      background: #fff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    .toggle {
+      cursor: pointer;
+      padding: 0.4rem 1rem;
+      background: var(--primary);
+      color: #000;
+      border-radius: 20px;
+      border: none;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: var(--card-dark);
+        padding: 1rem;
+        border-radius: 10px;
+      }
+
+      body.light-mode nav {
+        background: var(--card-light);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+
+    p {
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      background-color: #1a1a1a;
+      color: var(--text-light);
+    }
+
+    body.light-mode input,
+    body.light-mode textarea {
+      background: #fff;
+      color: #111;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: var(--primary);
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border: 2px solid var(--brand-blue);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: var(--brand-blue);
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    body.light-mode footer {
+      background: #f0f0f0;
+    }
+
+    footer a {
+      margin: 0 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="/"><img src="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png" alt="Acromatic Logo"></a>
+    Acromatic
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+  <nav id="main-nav">
+    <a href="/">Home</a>
+    <a href="/services">Early Access</a>
+    <a href="/contact">Contact</a>
+    <button class="toggle" onclick="toggleMode()">☀️/🌙</button>
+  </nav>
+</header>
+
+<main>
+  <h1>Contribute to Acromatic</h1>
+  <p>We’re always open to bold minds, big ideas, and visionary partners. Whether you want to join our team or support us as an investor — this is the place.</p>
+
+  <h2>🧑‍💻 Join the Mission</h2>
+  <p>Want to collaborate, build, or intern with us? Tell us about yourself, your interests, and how you want to contribute.</p>
+  <form action="https://formspree.io/f/xovwdrdw" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Tell us how you'd like to get involved" required></textarea>
+    <button type="submit">Join Acromatic</button>
+  </form>
+
+  <h2>💼 Invest in the Future</h2>
+  <p>Looking to support teen-led innovation in energy and AI? Become a backer or advisor and help us grow responsibly and globally.</p>
+  <form action="https://formspree.io/f/meokgngg" method="POST">
+    <input type="text" name="name" placeholder="Your Name / Org" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Share your intent or interest as an investor/advisor" required></textarea>
+    <button type="submit">Submit Investment Interest</button>
+  </form>
+</main>
+
+<footer>
+  <p>Connect with us:</p>
+  <a href="https://github.com/acromatic-technologies" target="_blank">GitHub</a> |
+  <a href="https://www.linkedin.com/in/acromatic-technologies-754b61357/" target="_blank">LinkedIn</a> |
+  <a href="https://www.instagram.com/acromatic.tech/" target="_blank">Instagram</a> |
+  <a href="https://x.com/Acromatic_Tech" target="_blank">X</a>
+  <p>&copy; 2025 Acromatic Technologies Pvt Ltd</p>
+</footer>
+
+<script>
+  function toggleMode() {
+    document.body.classList.toggle('light-mode');
+  }
+
+  function toggleMenu() {
+    document.getElementById('main-nav').classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
