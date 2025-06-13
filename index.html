@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acromatic - Emerging Technologies for a Better Tomorrow</title>
+  <meta name="description" content="Acromatic Technologies is an emerging full-spectrum tech company based in Delhi, focused on building innovative solutions across hardware, software, AI, and sustainable IT infrastructure. From intelligent server systems to next-gen platforms, Acromatic is shaping the future of technology.">
+  <meta name="keywords" content="acromatic, acromatic technologies, server optimization, sustainable IT, tech innovation, AI platforms, digital infrastructure, cloud systems, energy efficient computing, hardware-software integration, Delhi tech startup, Arnav Mishra">
+  <meta property="og:title" content="Acromatic Technologies Building the Future of Sustainable and Intelligent Tech">
+  <meta property="og:description" content="From intelligent server optimization to next-gen tech platforms, Acromatic Technologies is reimagining the future of IT, founded by teen innovator Arnav Mishra in Delhi.">
+  <meta property="og:image" content="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png">
+  <meta property="og:url" content="https://acromatic-technologies.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Acromatic - Emerging Technologies for a Better Tomorrow">
+  <meta name="twitter:description" content="Acromatic Technologies is an emerging full-spectrum tech company based in Delhi, focused on building innovative solutions across hardware, software, AI, and sustainable IT infrastructure.">
+  <meta name="twitter:image" content="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png">
+  <meta name="twitter:site" content="@Acromatic_Tech">
+  <link rel="canonical" href="https://acromatic-technologies.github.io/">
+  <link rel="icon" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/apple-toch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon-16x16.png">
+  <style>
+    :root {
+      --primary: #00ffe7;
+      --brand-blue: #0b0694;
+      --bg-dark: #0d0d0d;
+      --bg-light: #f7f7f7;
+      --text-light: #e6e6e6;
+      --text-dark: #111;
+      --card-dark: #111;
+      --card-light: #fff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    p { margin: 1rem 0; line-height: 1.6; }
+
+    .cta-btn {
+      background: var(--primary);
+      border: 2px solid var(--brand-blue);
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+      background: var(--brand-blue);
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.85);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    body.light-mode header {
+      background: #fff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+      background: transparent;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    .toggle {
+      cursor: pointer;
+      padding: 0.4rem 1rem;
+      background: var(--primary);
+      color: #000;
+      border-radius: 20px;
+      border: none;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: var(--card-dark);
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      }
+
+      body.light-mode nav {
+        background: var(--card-light);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    .hero.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+.hero.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    .cta-btn:hover, button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--primary);
+}
+
+    .tech-item, .card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.tech-item:hover, .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+
+    body.light-mode .hero {
+      background: linear-gradient(145deg, #e6f9f9, #ffffff);
+    }
+
+    .hero {
+      position: relative;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      background: linear-gradient(145deg, #000 40%, #031424 100%);
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 2.7rem;
+      margin-bottom: 1rem;
+      z-index: 2;
+    }
+    .hero h2 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      z-index: 2;
+    }
+    .hero p {
+      max-width: 700px;
+      text-align: center;
+      z-index: 2;
+    }
+    canvas {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .tech-item {
+      background: var(--card-dark);
+      border: 1px solid #222;
+      border-left: 4px solid var(--brand-blue);
+      padding: 1rem;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .tech-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+
+    body.light-mode .tech-item {
+      background: #fff;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    body.light-mode footer {
+      background: #f0f0f0;
+    }
+
+    footer a {
+      margin: 0 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media(min-width: 768px) {
+      .hero h1 { font-size: 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+<canvas id="hero-canvas"></canvas>
+<header>
+  <div class="logo">
+    <a href="https://acromatic-technologies.github.io"><img src="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png" alt="Acromatic Logo" />
+    </a>
+    Acromatic
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+
+  <nav id="main-nav">
+    <a href="#technologies">What We Do</a>
+    <a href="#project">Featured Project</a>
+    <a href="#innovation">Innovation First</a>
+    <a href="#join">Join Us</a>
+    <button class="toggle" onclick="toggleMode()">☀️/🌙</button>
+  </nav>
+</header>
+
+<section class="hero fade-in fade">
+  <h1>Inventing the Future of Tech</h1>
+  <h2>From smarter systems to sustainable infrastructure</h2>
+  <p>Acromatic is building powerful technologies across hardware, software, and AI to solve big problems — from energy efficiency to intelligent cloud systems.</p>
+  <br/>
+  <a class="cta-btn" href="#join">Partner With Us</a>
+</section>
+
+<section id="technologies" class="fade">
+  <h2>What We Do</h2>
+  <p>We develop impactful technology across multiple fields to shape tomorrow:</p>
+  <div class="tech-grid">
+    <div class="tech-item"><strong>Smart Systems</strong><br/> Embedded tech for real-time optimization</div>
+    <div class="tech-item"><strong>Next-Gen Devices</strong><br/> Custom-built electronics for enterprise impact</div>
+    <div class="tech-item"><strong>AI Platforms</strong><br/> Intelligence that evolves with data</div>
+    <div class="tech-item"><strong>Cloud Infrastructure</strong><br/> Reliable, scalable, and sustainable</div>
+    <div class="tech-item"><strong>Green Technologies</strong><br/> Engineering for climate-conscious solutions</div>
+    <div class="tech-item"><strong>Digital Ecosystems</strong><br/> Interconnected systems for global use</div>
+  </div>
+</section>
+
+<section id="project" class="fade">
+  <h2>Flagship Project: Acromatic Energy Optimization Engine</h2>
+  <p>Our first innovation tackles one of the biggest challenges in IT — energy waste in server infrastructure.</p>
+  <ul>
+    <li>🔋 Real-time energy consumption monitoring</li>
+    <li>❄️ AI-optimized cooling logic</li>
+    <li>🧠 System-level software-hardware orchestration</li>
+    <li>🌍 Designed for eco-conscious data centers</li>
+  </ul>
+  <br/>
+  <a class="cta-btn" href="/engine">Explore the Engine</a>
+</section>
+
+<section id="innovation" class="fade">
+  <h2>Innovation First</h2>
+  <p>Founded by 14-year-old technologist Arnav Mishra, Acromatic was born from curiosity, and scaled with vision — to create tech that impacts industries and the environment alike.</p>
+  <p>We’re building a research-first, problem-solving culture where innovation fuels sustainable progress across digital infrastructure.</p>
+  <blockquote style="font-style: italic; margin-top: 1rem;">"Age doesn't limit innovation. Passion, curiosity, and purpose do the real work." — Arnav Mishra</blockquote>
+</section>
+
+<section id="join" class="fade">
+  <h2>Join the Journey</h2>
+  <p>Whether you're an engineer, partner, investor, or supporter — there's a place for you in Acromatic’s mission.</p>
+  <br/>
+  <a class="cta-btn" href="/services">Get Early Access</a>
+  <a class="cta-btn" href="/contribute">Contribute</a>
+  <a class="cta-btn" style="margin-left: 1rem;" href="/contact">Contact Us</a>
+</section>
+
+<footer>
+  <p>Connect with us:</p>
+  <a href="https://github.com/acromatic-technologies" target="_blank">GitHub</a> |
+  <a href="https://www.linkedin.com/in/acromatic-technologies-754b61357/" target="_blank">LinkedIn</a> | 
+  <a href="https://www.instagram.com/acromatic.tech/" target="_blank">Instagram</a> |
+  <a href="https://x.com/Acromatic_Tech" target="_blank">X (Formerly Twitter)</a>
+  <p>&copy; 2025 Acromatic Technologies Pvt Ltd</p>
+</footer>
+
+<script>
+  function toggleMode() {
+    document.body.classList.toggle('light-mode');
+  }
+
+  function toggleMenu() {
+    document.getElementById('main-nav').classList.toggle('open');
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+<script>
+const canvas = document.getElementById("hero-canvas");
+const ctx = canvas.getContext("2d");
+let w, h, particles = [], rays = [];
+
+function resize() {
+  w = canvas.width = canvas.offsetWidth;
+  h = canvas.height = canvas.offsetHeight;
+
+  particles = Array.from({ length: 50 }, () => ({
+    x: Math.random() * w,
+    y: Math.random() * h,
+    r: Math.random() * 2 + 1,
+    vx: (Math.random() - 0.5) * 0.3,
+    vy: (Math.random() - 0.5) * 0.3
+  }));
+
+  rays = Array.from({ length: 6 }, () => ({
+    x1: 0,
+    y1: 0,
+    x2: Math.random() * w,
+    y2: Math.random() * h * 0.8,
+    alpha: Math.random() * 0.05 + 0.03
+  }));
+}
+
+function animate() {
+  ctx.clearRect(0, 0, w, h);
+
+  // Rays
+  rays.forEach(ray => {
+    const grad = ctx.createLinearGradient(ray.x1, ray.y1, ray.x2, ray.y2);
+    grad.addColorStop(0, `rgba(11,6,148,${ray.alpha})`);
+    grad.addColorStop(1, 'rgba(11,6,148,0)');
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = 100;
+    ctx.beginPath();
+    ctx.moveTo(ray.x1, ray.y1);
+    ctx.lineTo(ray.x2, ray.y2);
+    ctx.stroke();
+  });
+
+  // Particles
+  particles.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+    if (p.x < 0 || p.x > w) p.vx *= -1;
+    if (p.y < 0 || p.y > h) p.vy *= -1;
+
+    const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 6);
+    grad.addColorStop(0, "rgba(0,255,231,0.4)");
+    grad.addColorStop(1, "rgba(11,6,148,0)");
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r * 6, 0, 2 * Math.PI);
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+window.addEventListener("resize", resize);
+resize();
+animate();
+</script>
+
+</body>
+</html>
