@@ -182,6 +182,30 @@
       background: linear-gradient(145deg, #000 40%, #031424 100%);
     }
 
+    .hero.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+.hero.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    .cta-btn:hover, button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--primary);
+}
+
+    .tech-item, .card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.tech-item:hover, .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+
     body.light-mode .hero {
       background: linear-gradient(145deg, #e6f9f9, #ffffff);
     }
@@ -284,7 +308,7 @@
   </nav>
 </header>
 
-<section class="hero fade">
+<section class="hero fade-in fade">
   <h1>Inventing the Future of Tech</h1>
   <h2>From smarter systems to sustainable infrastructure</h2>
   <p>Acromatic is building powerful technologies across hardware, software, and AI to solve big problems — from energy efficiency to intelligent cloud systems.</p>
