@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acromans, Assemble! | Acromatic Technologies</title>
+  <link rel="icon" href="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/favicon.ico" />
+  <style>
+    :root {
+      --primary: #00ffe7;
+      --brand-blue: #0b0694;
+      --bg-dark: #0d0d0d;
+      --bg-light: #f7f7f7;
+      --text-light: #e6e6e6;
+      --text-dark: #111;
+      --card-dark: #111;
+      --card-light: #fff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    header.top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.85);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    body.light-mode header.top-nav {
+      background: #fff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    .toggle {
+      cursor: pointer;
+      padding: 0.4rem 1rem;
+      background: var(--primary);
+      color: #000;
+      border-radius: 20px;
+      border: none;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: var(--card-dark);
+        padding: 1rem;
+        border-radius: 10px;
+      }
+
+      body.light-mode nav {
+        background: var(--card-light);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    header.hero-header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: linear-gradient(145deg, #000 40%, #031424 100%);
+    }
+
+    body.light-mode header.hero-header {
+      background: linear-gradient(145deg, #e6f9f9, #ffffff);
+    }
+
+    header.hero-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    header.hero-header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: var(--card-dark);
+      border-left: 4px solid var(--brand-blue);
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+
+    body.light-mode ul li {
+      background: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    body.light-mode footer {
+      background: #f0f0f0;
+    }
+
+    footer a {
+      margin: 0 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer p {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    button {
+      background: var(--primary);
+      color: #000;
+      font-weight: bold;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border: 2px solid var(--brand-blue);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: var(--brand-blue);
+      color: #fff;
+    }
+
+    a {
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+<header class="top-nav">
+  <div class="logo">
+    <a href="/"><img src="https://acromatic-technologies.github.io/acromatic-technologies-web-old/assets/Acromatic.png" alt="Acromatic Logo"></a>
+    Acromatic
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+  <nav id="main-nav">
+    <a href="/">Home</a>
+    <a href="/services">Early Access</a>
+    <a href="/engine">Explore Engine</a>
+    <a href="/contact">Contact</a>
+    <button class="toggle" onclick="toggleMode()">☀️/🌙</button>
+  </nav>
+</header>
+
+<header class="hero-header">
+  <h1>Acromans, Assemble!</h1>
+  <p>
+    Acromatic Technologies isn’t building a server—we’re forging the next generation of intelligent infrastructure.
+    If you're an embedded wizard, firmware freak, hardware hacker, or systems savant, this is your battleground.
+  </p>
+  <br>
+  <p>We don't need: 
+    
+    TikTok engineers with LinkedIn certificates,
+
+Degree-collecting NPCs,
+<br>
+
+We need a team—the kind of engineers who build for the thrill, not the job. People who live in datasheets, cry in serial logs, and dream in pinouts.
+  </p>
+</header>
+
+<section>
+  <h2>Who We Need:</h2>
+  <ul>
+    <li><strong>Firmware Engineers</strong> – C, Assembly, BIOS/UEFI, hardware interfaces</li>
+    <li><strong>Embedded Systems</strong> – microcontrollers, sensors, fan control</li>
+    <li><strong>Systems Engineers</strong> – Rust/Go daemons, telemetry agents</li>
+    <li><strong>Hardware Designers</strong> – PCB layout, KiCad, power systems, thermal design</li>
+    <li><strong>Frontend/UI</strong> – JS, React/Svelte, real-time dashboards</li>
+  </ul>
+</section>
+
+<section>
+  <h2>What You’ll Gain:</h2>
+  <ul>
+    <li>Direct impact on hardware-in-progress—you’ll be on the front lines.</li>
+    <li>Leadership-level access: build, deploy, innovate with a teen founder.</li>
+    <li>Not another place to collect tasks. This is your playground of ownership.</li>
+    <li>Portfolio-ready, proprietary results—not open-source noise.</li>
+    <li>Early core team position. Equity/responsibility if we fund.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>How to Join the Rebellion:</h2>
+  <p>
+    1. Prepare a short intro: who you are, what you’ve built.<br>
+    2. Why you love to tinker with code, hardware, systems.<br>
+    3. Where to find you online (GitHub/Twitter/Tinkering logs).<br>
+    4. Send to <a href="mailto:acromatic.tech@gmail.com">acromatic.tech@gmail.com</a> or fill the form by clicking the button below.
+  </p>
+  <div class="cta">
+    <button onclick="location.href='/contribute'">Apply Now →</button>
+  </div>
+</section>
+
+<footer>
+  <p>Connect with us:</p>
+  <a href="https://github.com/acromatic-technologies" target="_blank">GitHub</a> |
+  <a href="https://www.linkedin.com/in/acromatic-technologies-754b61357/" target="_blank">LinkedIn</a> |
+  <a href="https://www.instagram.com/acromatic.tech/" target="_blank">Instagram</a> |
+  <a href="https://x.com/Acromatic_Tech" target="_blank">X</a>
+  <p>&copy; 2025 Acromatic Technologies Pvt Ltd</p>
+</footer>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle('light-mode');
+}
+function toggleMenu() {
+  document.getElementById('main-nav').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
